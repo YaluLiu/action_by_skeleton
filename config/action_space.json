@@ -1,0 +1,8 @@
+{
+    "normal":0,
+    "cross":1,
+    "throw":2,
+    "aim":3,
+    "handgun":4,
+    "attack":5
+}
