@@ -10,10 +10,11 @@ from utils import read_json,get_all_images
 
 #获取接口地址
 def get_url_alphapose():
+    global act_cfg
     #端口号
     port = 7008
     #主机地址
-    host = "192.168.200.233"
+    host = act_cfg["host"]
     cam_id = 2
     api = "api_detect_climb"
     detect_url = "http://{}:{}/{}/{}".format(host,port, api, cam_id)

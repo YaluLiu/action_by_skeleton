@@ -10,10 +10,9 @@ from utils import read_json,get_all_images
 
 #获取接口地址
 def get_url_alphapose():
-    #端口号
+    global act_cfg
+    host = act_cfg["host"]
     port = 7008
-    #主机地址
-    host = "192.168.200.233"
     cam_id = 2
     api = "api_detect_climb"
     detect_url = "http://{}:{}/{}/{}".format(host,port, api, cam_id)
@@ -58,12 +57,11 @@ def solve_one_image(image_path,act_name):
 
 if __name__ == '__main__':
     act_cfg = read_json("../config/action_space.json")
-    url = get_url_alphapose()
-    # solve_one_image("../imgs/1452.jpg","cross")
+    # url = get_url_alphapose()
 
-    imgs = get_all_images("../imgs")
-    for img_path in imgs:
-        solve_one_image(img_path,"cross")
+    # imgs = get_all_images("../imgs")
+    # for img_path in imgs:
+    #     solve_one_image(img_path,"cross")
     
 
     

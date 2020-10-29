@@ -59,7 +59,9 @@ def train_model(x_train,y_train):
     
 
 if __name__ == '__main__':
-    kps_data,label_data = make_train_data("../imgs")
+    act_cfg = read_json("../config/action_space.json")
+    train_data_path = act_cfg["train_data_path"]
+    kps_data,label_data = make_train_data(train_data_path)
     x = kps_data
     y = label_data
     x_train, x_test, y_train, y_test = train_test_split(x, y, 
@@ -72,7 +74,7 @@ if __name__ == '__main__':
     y_pred = np.array(y_pred)
 
 
-    act_cfg = read_json("../config/action_space.json")
+    
     target_names = list(act_cfg.keys())
     print(classification_report(y_test, y_pred, target_names=target_names))
 

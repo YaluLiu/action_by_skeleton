@@ -4,5 +4,7 @@
     "throw":2,
     "aim":3,
     "handgun":4,
-    "attack":5
+    "attack":5,
+    "host":"192.168.200.233",
+    "train_data_path":"imgs"
 }

@@ -4,5 +4,7 @@
     "raise_left":2,
     "raise_right":3,
     "touch_head":4,
-    "sit":5
+    "sit":5,
+    "host":"192.168.200.233",
+    "train_data_path":"imgs"
 }
